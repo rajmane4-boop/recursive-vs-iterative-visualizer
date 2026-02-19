@@ -34,9 +34,9 @@ An interactive web-based tool that demonstrates the **comparative analysis of re
 
 ## 📸 Screenshots
 
-![Call Stack Simulation & Execution Trace](screenshots/1st.png)
+![Call Stack Simulation & Execution Trace](Screenshots/1st.png)
 
-![Time Chart, Summary & Big-O Table](screenshots/2nd.png)
+![Time Chart, Summary & Big-O Table](Screenshots/2nd.png)
 
 ## 🚀 Getting Started
 
