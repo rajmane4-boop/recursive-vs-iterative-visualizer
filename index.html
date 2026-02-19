@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Comparative analysis of recursive and iterative approaches for Factorial and Fibonacci — with call stack simulation, function call counts, and execution time comparison." />
+    <title>Recursive vs Iterative Comparison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Floating Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <header>
+        <h1 class="glow-text">Comparative Analysis of Recursive and Iterative Approaches</h1>
+        <p class="subtitle">Factorial &amp; Fibonacci · Call Stack Simulation · Function Calls · Execution Time</p>
+    </header>
+
+    <div class="container">
+        <!-- Controls -->
+        <div class="controls reveal">
+            <div class="control-group">
+                <label for="algo">Algorithm</label>
+                <select id="algo">
+                    <option value="factorial">Factorial</option>
+                    <option value="fibonacci">Fibonacci</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="nVal">Value of n</label>
+                <input type="number" id="nVal" value="5" min="0" max="20" />
+            </div>
+            <button id="runBtn">
+                <span class="btn-icon">▶</span> Run Comparison
+                <span class="ripple-container"></span>
+            </button>
+        </div>
+
+        <!-- Side-by-Side Cards -->
+        <div class="grid">
+            <!-- Recursive Card -->
+            <div class="card recursive-card reveal tilt-card">
+                <div class="card-glow"></div>
+                <div class="card-header">
+                    <h2>🔁 Recursive</h2>
+                    <span class="badge" id="recBadge">—</span>
+                </div>
+                <div class="stack-label">Call Stack Simulation <span class="hint">(push ↓ / pop ↑)</span></div>
+                <div id="recStack" class="stack"></div>
+                <div class="metrics">
+                    <div class="metric">
+                        <span class="metric-label">Function Calls</span>
+                        <span class="metric-value" id="recCalls">0</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Execution Time</span>
+                        <span class="metric-value" id="recTime">0 ms</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Result</span>
+                        <span class="metric-value" id="recResult">—</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Iterative Card -->
+            <div class="card iterative-card reveal tilt-card">
+                <div class="card-glow"></div>
+                <div class="card-header">
+                    <h2>🔄 Iterative</h2>
+                    <span class="badge" id="itBadge">—</span>
+                </div>
+                <div class="stack-label">Execution Trace</div>
+                <div id="itStack" class="stack"></div>
+                <div class="metrics">
+                    <div class="metric">
+                        <span class="metric-label">Loop Steps</span>
+                        <span class="metric-value" id="itCalls">0</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Execution Time</span>
+                        <span class="metric-value" id="itTime">0 ms</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Result</span>
+                        <span class="metric-value" id="itResult">—</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Time Comparison Bar Chart -->
+        <div class="card chart-card reveal">
+            <h2>⏱ Execution Time Comparison</h2>
+            <div id="chartArea" class="chart-area">
+                <p class="chart-placeholder">Click <strong>Run Comparison</strong> to see the time chart.</p>
+            </div>
+        </div>
+
+        <!-- Summary Card -->
+        <div class="card summary-card" id="summaryCard" style="display:none;">
+            <h2>📊 Summary</h2>
+            <p id="summaryText"></p>
+        </div>
+
+        <!-- Big-O Complexity Table -->
+        <div class="card complexity-card reveal">
+            <h2>📐 Big-O Complexity Comparison</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Algorithm</th>
+                            <th>Approach</th>
+                            <th>Time Complexity</th>
+                            <th>Space Complexity</th>
+                            <th>Function Calls (n=10)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Factorial</td>
+                            <td><span class="tag tag-rec">Recursive</span></td>
+                            <td>O(n)</td>
+                            <td>O(n) <span class="dim">— call stack</span></td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-it">Iterative</span></td>
+                            <td>O(n)</td>
+                            <td>O(1)</td>
+                            <td>n</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Fibonacci</td>
+                            <td><span class="tag tag-rec">Recursive</span></td>
+                            <td>O(2ⁿ) <span class="dim">— exponential</span></td>
+                            <td>O(n) <span class="dim">— call stack depth</span></td>
+                            <td>177</td>
+                        </tr>
+                        <tr>
+                            <td><span class="tag tag-it">Iterative</span></td>
+                            <td>O(n)</td>
+                            <td>O(1)</td>
+                            <td>n − 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="reveal">
+        Data Structures Concept Demo — Recursion vs Iteration
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
