@@ -32,9 +32,11 @@ An interactive web-based tool that demonstrates the **comparative analysis of re
 - HTML5 / CSS3 / Vanilla JavaScript
 - No frameworks or libraries — zero dependencies
 
-## 📸 Screenshot
+## 📸 Screenshots
 
-> _Add a screenshot of your app here._
+![Call Stack Simulation & Execution Trace](screenshots/1st.png)
+
+![Time Chart, Summary & Big-O Table](screenshots/2nd.png)
 
 ## 🚀 Getting Started
 
