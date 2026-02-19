@@ -4,7 +4,7 @@ An interactive web-based tool that demonstrates the **comparative analysis of re
 
 ## 🔗 Live Demo
 
-> _Add your GitHub Pages link here after deploying._
+**[https://rajmane4-boop.github.io/recursive-vs-iterative-visualizer/](https://rajmane4-boop.github.io/recursive-vs-iterative-visualizer/)**
 
 ## ✨ Features
 
@@ -39,7 +39,7 @@ An interactive web-based tool that demonstrates the **comparative analysis of re
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/recursive-vs-iterative-visualizer.git
+git clone https://github.com/rajmane4-boop/recursive-vs-iterative-visualizer.git
 cd recursive-vs-iterative-visualizer
 # Open index.html in your browser
 ```
